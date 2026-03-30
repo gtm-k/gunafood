@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GunaFood Privacy Policy</title>
+    <style>
+        :root {
+            --bg-cream: #FAF6F0;
+            --text-brown: #2C1810;
+            --gold-accent: #D4A843;
+            --light-gold: #F5E6C8;
+            --soft-brown: #5C4033;
+            --border-gold: #E8D5A3;
+            --card-bg: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-cream);
+            color: var(--text-brown);
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 48px;
+            padding-bottom: 32px;
+            border-bottom: 2px solid var(--border-gold);
+        }
+
+        header h1 {
+            font-size: 2rem;
+            color: var(--text-brown);
+            margin-bottom: 4px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        header .subtitle {
+            font-size: 1.1rem;
+            color: var(--gold-accent);
+            font-weight: 600;
+        }
+
+        .meta {
+            text-align: center;
+            color: var(--soft-brown);
+            font-size: 0.9rem;
+            margin-bottom: 40px;
+        }
+
+        .intro {
+            background: linear-gradient(135deg, var(--light-gold) 0%, var(--card-bg) 100%);
+            border: 1px solid var(--border-gold);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 40px;
+            font-size: 1.05rem;
+        }
+
+        .intro p {
+            margin-bottom: 12px;
+        }
+
+        .intro p:last-child {
+            margin-bottom: 0;
+        }
+
+        .intro strong {
+            color: var(--text-brown);
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            color: var(--text-brown);
+            margin-top: 48px;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--gold-accent);
+            font-weight: 700;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            color: var(--soft-brown);
+            margin-top: 24px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 16px;
+        }
+
+        ul {
+            margin-bottom: 16px;
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        li strong {
+            color: var(--text-brown);
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-gold);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 20px 0;
+        }
+
+        .device-data-card {
+            background: linear-gradient(135deg, #E8F5E9 0%, var(--card-bg) 100%);
+            border: 1px solid #A5D6A7;
+        }
+
+        .device-data-card h3 {
+            color: #2E7D32;
+        }
+
+        .dont-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .dont-list li {
+            padding: 8px 0 8px 32px;
+            position: relative;
+            border-bottom: 1px solid var(--border-gold);
+        }
+
+        .dont-list li:last-child {
+            border-bottom: none;
+        }
+
+        .dont-list li::before {
+            content: "\2717";
+            position: absolute;
+            left: 4px;
+            color: #C62828;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 0.95rem;
+        }
+
+        th {
+            background: var(--gold-accent);
+            color: white;
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        th:first-child {
+            border-radius: 8px 0 0 0;
+        }
+
+        th:last-child {
+            border-radius: 0 8px 0 0;
+        }
+
+        td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border-gold);
+        }
+
+        tr:nth-child(even) td {
+            background: var(--bg-cream);
+        }
+
+        tr:last-child td:first-child {
+            border-radius: 0 0 0 8px;
+        }
+
+        tr:last-child td:last-child {
+            border-radius: 0 0 8px 0;
+        }
+
+        .future-section {
+            background: linear-gradient(135deg, #FFF8E1 0%, var(--card-bg) 100%);
+            border: 1px solid var(--gold-accent);
+            border-left: 4px solid var(--gold-accent);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 20px 0;
+        }
+
+        .future-section h3 {
+            color: var(--gold-accent);
+        }
+
+        .contact-card {
+            background: var(--text-brown);
+            color: var(--bg-cream);
+            border-radius: 12px;
+            padding: 32px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .contact-card h2 {
+            color: var(--gold-accent);
+            border-bottom: none;
+            margin-top: 0;
+        }
+
+        .contact-card a {
+            color: var(--gold-accent);
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-card p {
+            color: #D4C5B9;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-gold);
+            color: var(--soft-brown);
+            font-size: 0.85rem;
+        }
+
+        a {
+            color: var(--gold-accent);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 24px 16px 60px;
+            }
+
+            header h1 {
+                font-size: 1.6rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+                margin-top: 36px;
+            }
+
+            table {
+                font-size: 0.85rem;
+            }
+
+            th, td {
+                padding: 8px 10px;
+            }
+
+            .card, .future-section, .intro {
+                padding: 16px;
+            }
+
+            .contact-card {
+                padding: 24px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>GunaFood</h1>
+            <div class="subtitle">Privacy Policy</div>
+        </header>
+
+        <div class="meta">
+            <p><strong>Effective Date:</strong> March 30, 2026 &nbsp;|&nbsp; <strong>Last Updated:</strong> March 30, 2026</p>
+        </div>
+
+        <div class="intro">
+            <p>Hi there! We built GunaFood to help you explore the ancient wisdom of Ayurvedic food classification &mdash; Sattvic, Rajasic, and Tamasic. We believe privacy is a fundamental right, and we want to be completely transparent about how we handle your data.</p>
+            <p><strong>The short version: almost everything stays on your device, we don&rsquo;t know who you are, and we will never sell your data.</strong></p>
+        </div>
+
+        <!-- WHAT WE COLLECT -->
+        <h2>What We Collect</h2>
+
+        <h3>Anonymous Analytics (PostHog)</h3>
+        <p>We use PostHog to understand how people use the app in aggregate. This helps us figure out which features are helpful and where people get stuck. We collect:</p>
+        <ul>
+            <li><strong>Device type</strong> (e.g., iPhone 15, Pixel 8)</li>
+            <li><strong>Feature usage</strong> (which screens you visit, which features you use)</li>
+            <li><strong>Session counts</strong> (how often you open the app)</li>
+        </ul>
+        <p>What we <strong>don&rsquo;t</strong> collect through analytics: your name, email, IP address, precise location, or anything that could identify you personally. These are truly anonymous usage statistics.</p>
+
+        <h3>Crash Reports (Sentry)</h3>
+        <p>Nobody likes crashes, and Sentry helps us fix them quickly. When a crash occurs, we receive:</p>
+        <ul>
+            <li><strong>Device type and OS version</strong></li>
+            <li><strong>Stack traces</strong> (technical details about what went wrong in the code)</li>
+        </ul>
+        <p>No personal data is included in crash reports.</p>
+
+        <!-- WHAT STAYS ON YOUR DEVICE -->
+        <h2>What Stays on Your Device</h2>
+
+        <div class="card device-data-card">
+            <p>The following data is stored <strong>entirely on your device</strong> and never leaves it:</p>
+            <ul>
+                <li><strong>Search history</strong> &mdash; stored locally using SQLite</li>
+                <li><strong>Favorite foods</strong> &mdash; stored locally using SQLite</li>
+                <li><strong>Guna quiz results</strong> &mdash; stored locally using AsyncStorage</li>
+            </ul>
+            <p>We cannot see, access, or retrieve any of this data. If you delete the app, this data is permanently erased.</p>
+        </div>
+
+        <!-- THIRD-PARTY SERVICES -->
+        <h2>Third-Party Services</h2>
+        <p>We work with a small number of third-party services. Here&rsquo;s exactly what each one does:</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Service</th>
+                    <th>Purpose</th>
+                    <th>Data Shared</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>PostHog</strong></td>
+                    <td>Anonymous analytics</td>
+                    <td>Device type, feature usage, session counts</td>
+                </tr>
+                <tr>
+                    <td><strong>Sentry</strong></td>
+                    <td>Crash reporting</td>
+                    <td>Device type, OS version, stack traces</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>We do not share any personal data with these services because we don&rsquo;t collect any personal data in the first place.</p>
+
+        <!-- WHAT WE DON'T DO -->
+        <h2>What We Don&rsquo;t Do</h2>
+        <div class="card">
+            <ul class="dont-list">
+                <li>We <strong>don&rsquo;t</strong> collect your name, email, phone number, or any contact information</li>
+                <li>We <strong>don&rsquo;t</strong> track your location</li>
+                <li>We <strong>don&rsquo;t</strong> access your camera, microphone, or photos</li>
+                <li>We <strong>don&rsquo;t</strong> show ads or share data with advertisers</li>
+                <li>We <strong>don&rsquo;t</strong> sell, rent, or trade your data to anyone &mdash; ever</li>
+                <li>We <strong>don&rsquo;t</strong> create user profiles or track you across other apps</li>
+                <li>We <strong>don&rsquo;t</strong> use cookies or cross-site tracking</li>
+                <li>We <strong>don&rsquo;t</strong> collect health or medical data</li>
+            </ul>
+        </div>
+
+        <!-- CHILDREN'S PRIVACY -->
+        <h2>Children&rsquo;s Privacy</h2>
+        <p>GunaFood does not knowingly collect personal information from children under 13 (or the applicable age in your jurisdiction). Since we don&rsquo;t collect personal information from anyone, we believe the app is safe for users of all ages.</p>
+        <p>If you are a parent or guardian and believe your child has somehow provided us with personal information, please contact us at the email below and we will promptly address it.</p>
+
+        <!-- FUTURE FEATURES -->
+        <h2>Future Features</h2>
+        <p>We&rsquo;re working on new features that will involve additional data handling. We will update this policy before these features launch, but here&rsquo;s what&rsquo;s planned:</p>
+
+        <div class="future-section">
+            <h3>Food Photo Classification</h3>
+            <p>Photos may be sent to the <strong>Google Gemini API</strong> for AI-powered food classification. Photos are processed transiently and are <strong>not stored</strong> by us or by Google beyond what is needed to return a result. You will always be asked for camera permission first.</p>
+
+            <h3>Barcode Scanning</h3>
+            <p>Barcode data may be sent to the <strong>Open Food Facts API</strong> to look up food information. These lookups are transient and not stored.</p>
+
+            <h3>Optional User Accounts</h3>
+            <p>We plan to offer optional accounts via <strong>Supabase</strong> so you can sync your data across devices. This would involve collecting your <strong>email address</strong> and storing your <strong>meal logs</strong> on our servers. Account creation will always be optional.</p>
+
+            <h3>Premium Subscriptions</h3>
+            <p><strong>RevenueCat</strong> will manage subscriptions. RevenueCat processes purchase data through the app stores (Apple/Google) &mdash; we don&rsquo;t handle payment information directly.</p>
+        </div>
+
+        <p>We will notify you of any changes to this policy and request any new permissions before collecting additional data.</p>
+
+        <!-- DATA SECURITY -->
+        <h2>Data Security</h2>
+        <p>We take reasonable measures to protect any data we process. All analytics and crash data are transmitted using industry-standard encryption (TLS/HTTPS). On-device data benefits from your device&rsquo;s built-in security features.</p>
+
+        <!-- YOUR RIGHTS -->
+        <h2>Your Rights</h2>
+        <p>Depending on where you live, you may have rights regarding your data under laws like GDPR, CCPA, or similar regulations. Since we don&rsquo;t collect personal data in V1 of the app, there is very little data to act on. However:</p>
+        <ul>
+            <li><strong>On-device data:</strong> You can clear this at any time by clearing the app&rsquo;s data or uninstalling it</li>
+            <li><strong>Analytics data:</strong> Since analytics are anonymous and not linked to you, we cannot identify or delete specific records</li>
+            <li><strong>Future account data:</strong> When accounts are introduced, you will be able to request access to, correction of, or deletion of your account data</li>
+        </ul>
+
+        <!-- CHANGES -->
+        <h2>Changes to This Policy</h2>
+        <p>We may update this policy as we add features or as privacy laws evolve. When we do:</p>
+        <ul>
+            <li>We&rsquo;ll update the &ldquo;Last Updated&rdquo; date at the top</li>
+            <li>For significant changes, we&rsquo;ll notify you through the app</li>
+            <li>We&rsquo;ll never retroactively weaken your privacy protections without your consent</li>
+        </ul>
+
+        <!-- CONTACT -->
+        <div class="contact-card">
+            <h2>Contact Us</h2>
+            <p>If you have questions, concerns, or just want to say hi:</p>
+            <p><a href="mailto:privacy@gunafood.app">privacy@gunafood.app</a></p>
+            <p>We aim to respond to all privacy-related inquiries within 7 business days.</p>
+        </div>
+
+        <footer>
+            <p>This privacy policy applies to the GunaFood mobile application available on iOS and Android.</p>
+        </footer>
+    </div>
+</body>
+</html>
