@@ -296,25 +296,38 @@
         </header>
 
         <div class="meta">
-            <p><strong>Effective Date:</strong> March 30, 2026 &nbsp;|&nbsp; <strong>Last Updated:</strong> March 30, 2026</p>
+            <p><strong>Effective Date:</strong> March 30, 2026 &nbsp;|&nbsp; <strong>Last Updated:</strong> July 10, 2026</p>
         </div>
 
         <div class="intro">
             <p>Hi there! We built GunaFood to help you explore the ancient wisdom of Ayurvedic food classification &mdash; Sattvic, Rajasic, and Tamasic. We believe privacy is a fundamental right, and we want to be completely transparent about how we handle your data.</p>
-            <p><strong>The short version: almost everything stays on your device, we don&rsquo;t know who you are, and we will never sell your data.</strong></p>
+            <p><strong>The short version: your personal content stays on your device, usage data is tied to a random device identifier rather than your name or email, and we will never sell your data.</strong></p>
         </div>
 
         <!-- WHAT WE COLLECT -->
         <h2>What We Collect</h2>
 
-        <h3>Anonymous Analytics (PostHog)</h3>
-        <p>We use PostHog to understand how people use the app in aggregate. This helps us figure out which features are helpful and where people get stuck. We collect:</p>
+        <h3>Usage Analytics (PostHog)</h3>
+        <p>We use PostHog to understand how people use the app. This helps us figure out which features are helpful and where people get stuck. We collect:</p>
         <ul>
-            <li><strong>Device type</strong> (e.g., iPhone 15, Pixel 8)</li>
-            <li><strong>Feature usage</strong> (which screens you visit, which features you use)</li>
+            <li><strong>Screen views</strong> (which screens you visit and in what order)</li>
+            <li><strong>Feature usage</strong> (e.g., searches performed &mdash; including the search terms you enter &mdash; foods viewed, quizzes completed)</li>
+            <li><strong>App lifecycle events</strong> (when the app is installed, updated, opened, backgrounded, or closed)</li>
+            <li><strong>Device platform and model</strong> (e.g., iOS or Android, iPhone 15, Pixel 8) and operating system version</li>
+            <li><strong>App version</strong> (so we can tell which release a problem belongs to)</li>
             <li><strong>Session counts</strong> (how often you open the app)</li>
         </ul>
-        <p>What we <strong>don&rsquo;t</strong> collect through analytics: your name, email, IP address, precise location, or anything that could identify you personally. These are truly anonymous usage statistics.</p>
+        <p>This data is tied to a <strong>random identifier generated on your device</strong> &mdash; not to your name, email, or an account. The app has no accounts and never asks for contact details. Because the identifier is device-scoped, this data is pseudonymous rather than anonymous: events from the same device are grouped together, but nothing in them tells us who you are. Like any internet service, PostHog also receives your device&rsquo;s IP address when the app sends data; it may be used to derive an approximate location (such as country or city), never your precise location.</p>
+
+        <h3>Session Replay (PostHog)</h3>
+        <p>Starting with app version 1.1.0, we record visual replays of in-app sessions so we can improve the product and debug problems &mdash; for example, seeing exactly where a screen misbehaves or where a flow confuses people. Here is what that means in practice:</p>
+        <ul>
+            <li><strong>What is recorded:</strong> a video-like reconstruction of the app&rsquo;s screens during your session, along with taps and navigation between screens</li>
+            <li><strong>What is masked:</strong> <strong>all text inputs and all images are masked</strong> (replaced with placeholders) on your device before anything is sent &mdash; whatever you type into the app never appears in a recording</li>
+            <li><strong>What is never recorded:</strong> anything outside the GunaFood app &mdash; not your home screen, notifications, other apps, camera, or microphone</li>
+            <li><strong>Why:</strong> product improvement and debugging only &mdash; replays are never used for advertising and never shared with anyone other than PostHog, which processes them on our behalf</li>
+        </ul>
+        <p>Session replays are tied to the same device-scoped identifier as our usage analytics, and you can ask us to delete them at any time (see &ldquo;Your Rights&rdquo; below).</p>
 
         <h3>Crash Reports (Sentry)</h3>
         <p>Nobody likes crashes, and Sentry helps us fix them quickly. When a crash occurs, we receive:</p>
@@ -328,13 +341,13 @@
         <h2>What Stays on Your Device</h2>
 
         <div class="card device-data-card">
-            <p>The following data is stored <strong>entirely on your device</strong> and never leaves it:</p>
+            <p>The following data is stored <strong>on your device</strong> using AsyncStorage:</p>
             <ul>
-                <li><strong>Search history</strong> &mdash; stored locally using AsyncStorage</li>
-                <li><strong>Favorite foods</strong> &mdash; stored locally using AsyncStorage</li>
-                <li><strong>Guna quiz results</strong> &mdash; stored locally using AsyncStorage</li>
+                <li><strong>Search history</strong> &mdash; your list of recent searches lives only on your device (the search terms themselves are also included in our usage analytics, as described above)</li>
+                <li><strong>Favorite foods</strong> &mdash; your favorites list lives only on your device (a usage-analytics event records when a food is favorited or unfavorited)</li>
+                <li><strong>Guna quiz results</strong> &mdash; your answers live only on your device (a usage-analytics event records that the quiz was completed and the resulting guna type)</li>
             </ul>
-            <p>We cannot see, access, or retrieve any of this data. If you delete the app, this data is permanently erased.</p>
+            <p>We cannot retrieve these on-device records ourselves. If you delete the app, this locally stored data is permanently erased.</p>
         </div>
 
         <!-- THIRD-PARTY SERVICES -->
@@ -352,8 +365,8 @@
             <tbody>
                 <tr>
                     <td><strong>PostHog</strong></td>
-                    <td>Anonymous analytics</td>
-                    <td>Device type, feature usage, session counts</td>
+                    <td>Usage analytics &amp; session replay</td>
+                    <td>Screen views, feature usage, app lifecycle events, device platform &amp; model, OS &amp; app version, masked session recordings, device-scoped identifier</td>
                 </tr>
                 <tr>
                     <td><strong>Sentry</strong></td>
@@ -362,18 +375,18 @@
                 </tr>
             </tbody>
         </table>
-        <p>We do not share any personal data with these services because we don&rsquo;t collect any personal data in the first place.</p>
+        <p>Our analytics and session replay data are processed by <strong>PostHog Inc.</strong> on its US cloud (servers located in the United States). We never share your name, email, or contact information with these services &mdash; the app doesn&rsquo;t collect them in the first place.</p>
 
         <!-- WHAT WE DON'T DO -->
         <h2>What We Don&rsquo;t Do</h2>
         <div class="card">
             <ul class="dont-list">
                 <li>We <strong>don&rsquo;t</strong> collect your name, email, phone number, or any contact information</li>
-                <li>We <strong>don&rsquo;t</strong> track your location</li>
+                <li>We <strong>don&rsquo;t</strong> collect your precise location (analytics may derive an approximate region from your IP address)</li>
                 <li>We <strong>don&rsquo;t</strong> access your camera, microphone, or photos</li>
                 <li>We <strong>don&rsquo;t</strong> show ads or share data with advertisers</li>
                 <li>We <strong>don&rsquo;t</strong> sell, rent, or trade your data to anyone &mdash; ever</li>
-                <li>We <strong>don&rsquo;t</strong> create user profiles or track you across other apps</li>
+                <li>We <strong>don&rsquo;t</strong> track you across other apps or websites, and we don&rsquo;t use advertising identifiers</li>
                 <li>We <strong>don&rsquo;t</strong> use cookies or cross-site tracking</li>
                 <li>We <strong>don&rsquo;t</strong> collect health or medical data</li>
             </ul>
@@ -381,7 +394,7 @@
 
         <!-- CHILDREN'S PRIVACY -->
         <h2>Children&rsquo;s Privacy</h2>
-        <p>GunaFood does not knowingly collect personal information from children under 13 (or the applicable age in your jurisdiction). Since we don&rsquo;t collect personal information from anyone, we believe the app is safe for users of all ages.</p>
+        <p>GunaFood does not knowingly collect personal information from children under 13 (or the applicable age in your jurisdiction). The app has no accounts and never asks anyone &mdash; child or adult &mdash; for a name, email address, or other contact details.</p>
         <p>If you are a parent or guardian and believe your child has somehow provided us with personal information, please contact us at the email below and we will promptly address it.</p>
 
         <!-- FUTURE FEATURES -->
@@ -406,16 +419,17 @@
 
         <!-- DATA SECURITY -->
         <h2>Data Security</h2>
-        <p>We take reasonable measures to protect any data we process. All analytics and crash data are transmitted using industry-standard encryption (TLS/HTTPS). On-device data benefits from your device&rsquo;s built-in security features.</p>
+        <p>We take reasonable measures to protect any data we process. All analytics, session replay, and crash data are transmitted using industry-standard encryption (TLS/HTTPS). On-device data benefits from your device&rsquo;s built-in security features.</p>
 
         <!-- YOUR RIGHTS -->
         <h2>Your Rights</h2>
-        <p>Depending on where you live, you may have rights regarding your data under laws like GDPR, CCPA, or similar regulations. Since we don&rsquo;t collect personal data in V1 of the app, there is very little data to act on. However:</p>
+        <p>Depending on where you live, you may have rights regarding your data under laws like GDPR, CCPA, or similar regulations. Here is how they apply to GunaFood:</p>
         <ul>
             <li><strong>On-device data:</strong> You can clear this at any time by clearing the app&rsquo;s data or uninstalling it</li>
-            <li><strong>Analytics data:</strong> Since analytics are anonymous and not linked to you, we cannot identify or delete specific records</li>
+            <li><strong>Analytics and session replay data:</strong> You can ask us to delete the data associated with your device by emailing <a href="mailto:gunafood9@gmail.com">gunafood9@gmail.com</a>. Because this data is tied to a random device identifier rather than your name, please tell us your device model, platform (iOS or Android), and roughly when you used the app so we can locate the right records. We will delete the matching records from PostHog and confirm once done.</li>
             <li><strong>Future account data:</strong> When accounts are introduced, you will be able to request access to, correction of, or deletion of your account data</li>
         </ul>
+        <p>Uninstalling the app stops all future analytics and session replay collection from your device; data collected before that remains with PostHog until you ask us to delete it.</p>
 
         <!-- CHANGES -->
         <h2>Changes to This Policy</h2>
