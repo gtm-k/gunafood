@@ -297,11 +297,12 @@
 
         <div class="meta">
             <p><strong>Effective Date:</strong> March 30, 2026 &nbsp;|&nbsp; <strong>Last Updated:</strong> November 1, 2026</p>
+            <p><strong>What changed on November 1, 2026:</strong> earlier versions of this page said that no health or medical data was collected and that usage data could not tell us who you are. We corrected how this page describes search terms and other usage data, including data that can relate to your health or spiritual practice, and we added that PostHog keeps your IP address. What the app sends did not change.</p>
         </div>
 
         <div class="intro">
             <p>Hi there! We built GunaFood to help you explore the ancient wisdom of Ayurvedic food classification &mdash; Sattvic, Rajasic, and Tamasic. We believe privacy is a fundamental right, and we want to be completely transparent about how we handle your data.</p>
-            <p><strong>The short version: your saved content stays on your device, search terms and other usage data go to our analytics tied to a random device identifier rather than your name or email, and we will never sell your data.</strong></p>
+            <p><strong>The short version: your saved content stays on your device, search terms and other usage data go to our analytics with a random device identifier and your IP address, the app does not ask for your name or email, and we will never sell your data.</strong></p>
         </div>
 
         <!-- WHAT WE COLLECT -->
@@ -318,7 +319,7 @@
             <li><strong>App version</strong> (so we can tell which release a problem belongs to)</li>
             <li><strong>Session counts</strong> (how often you open the app)</li>
         </ul>
-        <p>This data is tied to a <strong>random identifier generated on your device</strong> &mdash; not to your name, email, or an account. The app has no accounts and never asks for contact details. Because the identifier is device-scoped, this data is pseudonymous rather than anonymous: events from the same device are grouped together, but nothing in them tells us who you are. Like any internet service, PostHog also receives your device&rsquo;s IP address when the app sends data; it may be used to derive an approximate location (such as country or city), never your precise location.</p>
+        <p>This data is tied to a <strong>random identifier generated on your device</strong> &mdash; not to your name, email, or an account. The app has no accounts and never asks for contact details. Because the identifier is device-scoped, this data is pseudonymous rather than anonymous: events from the same device are grouped together, and the search terms you type could include information about you. Like any internet service, PostHog also receives and keeps your device&rsquo;s IP address when the app sends data; it may be used to derive an approximate location (such as country, city or postal code), never your precise location.</p>
 
         <h3>Session Replay (PostHog)</h3>
         <p>Starting with app version 1.1.0, we record visual replays of in-app sessions so we can improve the product and debug problems &mdash; for example, seeing exactly where a screen misbehaves or where a flow confuses people. Here is what that means in practice:</p>
@@ -376,14 +377,14 @@
                 </tr>
             </tbody>
         </table>
-        <p>Our analytics and session replay data are processed by <strong>PostHog Inc.</strong> on its US cloud (servers located in the United States). We never share your name, email, or contact information with these services &mdash; the app doesn&rsquo;t collect them in the first place.</p>
+        <p>Our analytics and session replay data are processed by <strong>PostHog Inc.</strong> on its US cloud (servers located in the United States). The app never asks for your name, email, or contact information. They could reach PostHog if you type them into a search.</p>
 
         <!-- WHAT WE DON'T DO -->
         <h2>What We Don&rsquo;t Do</h2>
         <div class="card">
             <ul class="dont-list">
-                <li>We <strong>don&rsquo;t</strong> collect your name, email, phone number, or any contact information</li>
-                <li>We <strong>don&rsquo;t</strong> collect your precise location (analytics may derive an approximate region from your IP address)</li>
+                <li>We <strong>don&rsquo;t</strong> ask for your name, email, phone number, or any contact information in the app</li>
+                <li>We <strong>don&rsquo;t</strong> collect your precise location (analytics may derive an approximate location from your IP address)</li>
                 <li>We <strong>don&rsquo;t</strong> access your camera, microphone, or photos</li>
                 <li>We <strong>don&rsquo;t</strong> show ads or share data with advertisers</li>
                 <li>We <strong>don&rsquo;t</strong> sell, rent, or trade your data to anyone &mdash; ever</li>
